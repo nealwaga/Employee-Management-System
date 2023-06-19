@@ -18,7 +18,7 @@ Users would like to:
 
 ## SetUp / Installation Requirements
 ### Cloning
-* In your terminal:
+In your terminal:
 1. Clone the repository
 >``$ git clone https://github.com/nealwaga/Employee-Management-System``
 2. Navigate to the project folder
