@@ -19,9 +19,10 @@ Users would like to:
 ## SetUp / Installation Requirements
 ### Cloning
 * In your terminal:
-
-    >``$ git clone https://github.com/nealwaga/Employee-Managemnt-System``
-    >``$ cd Employee-Managemnt-System``
+1. Clone the repository
+>``$ git clone https://github.com/nealwaga/Employee-Managemnt-System``
+2. Navigate to the project folder
+>``$ cd Employee-Managemnt-System``
 ---
 ## Installations
 * The following command installs all the application requirements:
