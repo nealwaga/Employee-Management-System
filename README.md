@@ -10,7 +10,7 @@ This is a simple web application that allows users to sign-up or log-in then upd
 ## User Stories
 These are the behaviors/features that the application implements for use by a user.
 Users would like to:
-* Sign in with the application to start using.
+* Sign in to the application to start using.
 * Update their profile.
 * Upload whatever files they want to with a subject description.
 * Search for a file upload if they are too many.
@@ -20,9 +20,9 @@ Users would like to:
 ### Cloning
 * In your terminal:
 1. Clone the repository
->``$ git clone https://github.com/nealwaga/Employee-Managemnt-System``
+>``$ git clone https://github.com/nealwaga/Employee-Management-System``
 2. Navigate to the project folder
->``$ cd Employee-Managemnt-System``
+>``$ cd Employee-Management-System``
 ---
 ## Running the Application
 After extracting the files, 
