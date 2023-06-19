@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 class Profile(models.Model):
     user = models.OneToOneField (User, on_delete=models.CASCADE, related_name='profile')
     image = CloudinaryField ('image')
-    name = models.CharField (blank=False, max_length=100)
+    full_name = models.CharField (blank=False, max_length=100)
     email = models.EmailField (blank=False, max_length=100)
     phone_number = models.CharField(max_length=25, blank=True, null=True)
     job_title = models.CharField(max_length=100, blank=True, null=False)
