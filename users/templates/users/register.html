@@ -13,7 +13,7 @@
                 
                 <div class="row "> 
                     {% comment %} <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}"></a> {% endcomment %}
-                    <img src="{% static 'assets/signup.svg' %}" alt="" class="img-fluid img-responsive testss" >
+                    <img src="{% static 'assets/login.png' %}" alt="" class="img-fluid img-responsive testss" >
                 </div>
 
                 
@@ -27,8 +27,8 @@
                     </div>
                 </div>
 
-                <div class="row mt-5"><h6 class="text-muted ms-5">What's Up! Come on, let's help you manage your finances.</h6></div>
-                <div class="row"><h1 class="ms-4 fw-bold">Sign up to Neal's Cash Control Application</h1></div>
+                <div class="row mt-5"><h6 class="text-muted ms-5">What's up? Come on, let's upload some files.</h6></div>
+                <div class="row ms-3"><h1 class="ms-4 fw-bold">Sign Up to use Neal's File Upload Application</h1></div>
                 <div class="row ms-5 mt-3">
                    <h6 class="text-muted">Already have an account? <a href="{% url 'login'%}"><span class="fw-bold ms-5" style="color:rgb(175, 0, 102) ; cursor:pointer;">Sign in</span></a></h6>
                 </div>
@@ -39,10 +39,7 @@
                     {{form.username}}
                     {{form.password1}}
                     {{form.password2}} {% endcomment %}
-                    <div class="mt-5">
-                        <input type="checkbox" name="check" id="">
-                        <label for="check">Send me promotional emails, deals and events</label>
-                    </div>
+                    
                     <div class="mt-5">
                         <input type="submit" class="mt-5 button-66" value="Create Account">
                     </div>

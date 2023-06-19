@@ -7,3 +7,6 @@ class UploadPDF(models.Model):
     subject = models.CharField(max_length=50, blank=True, null=True)
     pdf_file = models.FileField(upload_to='media/pdfs/')
     upload_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-upload_date']
