@@ -24,10 +24,6 @@ Users would like to:
 2. Navigate to the project folder
 >``$ cd Employee-Managemnt-System``
 ---
-## Installations
-* The following command installs all the application requirements:
-    >``pip freeze -r requirements.txt``
----
 ## Running the Application
 After extracting the files, 
 1. Navigate to the project folder
@@ -36,7 +32,9 @@ After extracting the files,
 >``virtualenv virtual``
 3. Activating the virtual environment
 >``source virtual/bin/activate``
-4. Running the application
+4. Installing the needed packages
+>``pip freeze -r requirements.txt``
+5. Running the application
 >``python3 manage.py runserver``
 ***
 
