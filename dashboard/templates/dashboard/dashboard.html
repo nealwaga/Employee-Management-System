@@ -105,12 +105,14 @@
                                 <tr>
                                     <th scope="row">{{ forloop.counter }}</th>
                                     <td>{{pdf.subject}}</td>
-                                    <td>{{pdf.pdf_file}}</td>
+                                    <td>
+                                      <a href="{% url 'view_pdf' pdf.id %}" target="_blank">{{ pdf.pdf_file }}</a>
+                                    </td>
                                     <td>{{pdf.upload_date}}</td>
                                 </tr>
                                   {% endfor %}
                                     {% else %}
-                                    <td colspan="5" class="table-active">You have not uploaded any files but no worries, you can add one. <a href=""><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add File(s)</button></a></td>
+                                    <td colspan="5" class="table-active">You have not uploaded any files but no worries, you can add one. <button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add File(s)</button></td>
                                     {% endif %}
                                 </tbody>
                               </table>

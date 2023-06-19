@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.http import FileResponse
 import datetime
 
 from .forms import UploadPDFForm
@@ -35,3 +36,8 @@ def dashboard(request):
         'pdfs':pdfs,
     }
     return render(request, 'dashboard/dashboard.html', context)
+
+@login_required
+def view_pdf(request, pdf_id):
+    pdf = get_object_or_404(UploadPDF, id=pdf_id)
+    return FileResponse(pdf.pdf_file)

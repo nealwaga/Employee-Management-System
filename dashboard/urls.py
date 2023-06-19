@@ -7,4 +7,5 @@ from . import views
 urlpatterns = [
     path('', views.landing, name='landing'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('pdf/<int:pdf_id>/', views.view_pdf, name='view_pdf'),
 ]
