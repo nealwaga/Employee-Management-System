@@ -47,7 +47,7 @@ After extracting the files,
 * HTML5  
 * CSS3
 * jQuery
-* Bootstrap 3
+* Bootstrap 5
 ***
 
 ## Known Bugs
