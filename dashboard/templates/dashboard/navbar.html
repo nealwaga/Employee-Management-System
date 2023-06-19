@@ -1,0 +1,33 @@
+{%load static%}
+{% comment %} <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}"</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+    
+    
+    <ul>
+
+    
+  </nav> {% endcomment %}
+ 
+ <nav class="navbar navbar-expand-lg navbar-light bg-none mb-3" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    {% comment %} <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}"></a> {% endcomment %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto" >
+    
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'login'%}"><button type="button" class="btn btn-dark">Sign In</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{%url 'register'%}"><button type="button" class="btn btn-dark" type="submit">Sign Up</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

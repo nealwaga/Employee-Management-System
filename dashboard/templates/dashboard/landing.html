@@ -1,0 +1,71 @@
+{%extends 'dashboard/base.html'%}
+{% block content %}
+{%load static%}
+
+  <div class="container">
+    <div class="row mx-lg-n5">
+      <div class="col py-3 px-lg-5  bg-white">
+        <h4><b>Welcome to</b></h4>
+        <h1>Neal's Cash Control Application</h1>
+        <p>Cash Control is a complete online finance tracker which <br>
+            allows you to keep track of your finances. 
+            Forget about the days money is gone and you have no idea how it was spent!<br>
+        Cash Control will help you when it comes to that. <br>
+        Sounds cool, right? Let's get to it! <br> </p>
+
+        <a class="nav-link" href="{%url 'login'%}"><button type="button" class="btn btn-dark mt-5 mb-5">GET STARTED FOR FREE</button></a>
+
+        
+        <div class="row">       
+          <div class="col-md-4">
+              <img src="{% static 'images/gram2.png' %}" width="150" height="50">
+          </div>
+          <div class="col-md-4">
+              <img src="{% static 'images/gram3.png' %}" width="150" height="50">
+          </div>
+        
+      </div>
+        
+      </div>
+      <div class="col py-3 px-lg-5  bg-white">
+        <img class="image-fluid" src="{% static 'images/land.png'%}" style="width:100%; padding-top:30px; padding-left:none;" >
+      </div>
+    </div>
+  </div>
+  <style>
+   
+    h4{
+        font-size:30px;
+        margin-top:100px;
+        font-weight:bold;
+    }
+    h1{
+        font-size:60px;
+        font-weight: bold; 
+        color:#05445E;
+       
+    }
+    p{
+        font-weight:bold;
+        color:#05445E;
+    }
+
+    h2{
+        padding-top:150px;
+    }
+
+    button{
+      border: none;
+    }
+    .btn{
+      border-radius: 40px;
+      font-weight:bold;
+     
+    }
+    
+  
+  </style>
+
+
+
+{% endblock %}

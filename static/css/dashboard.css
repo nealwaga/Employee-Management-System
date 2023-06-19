@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+*{
+    color: rgb(1, 1, 74);
+    font-family: 'Poppins', sans-serif;
+}
+
+.dash{
+    background: rgb(212,241,244);
+background: linear-gradient(138deg, rgba(212,241,244,1) 0%, rgba(242,227,249,0.7679446778711485) 93%, rgba(228,250,246,1) 100%);
+    height: 100vh;
+}
+.prof{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    list-style-type: none;
+    border: none;
+    border-radius: 20px;
+    max-height: 14rem;
+    max-width: 20rem;
+    color: rgb(20, 18, 18);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card3{
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+.lnk, .menu{
+    text-decoration: none;
+    color: #030137;
+    font-weight: 700;
+}
+.tsmall{
+    font-size: 18px;
+}
+
+.badge {
+    height: 120px;
+    width: 120px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; /* may require vendor prefixes */
+    border-top: 10px solid rgb(74, 118, 230);
+    border-right: 10px solid rgb(197, 243, 245);
+    border-bottom: 10px solid rgb(8, 188, 238);
+    border-left: 10px solid rgb(4, 4, 125);
+    font-size: 28px;
+    font-weight: 600;
+
+  }
+
+  .badge2 {
+    height: 120px;
+    width: 120px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; /* may require vendor prefixes */
+    border-top: 10px solid rgb(236, 0, 98);
+    border-right: 10px solid rgb(59, 0, 220);
+    border-bottom: 10px solid rgb(234, 238, 8);
+    border-left: 10px solid rgb(184, 104, 0);
+    font-size: 28px;
+    font-weight: 600;
+
+  }
+
+  .badge3 {
+    height: 120px;
+    width: 120px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; /* may require vendor prefixes */
+    border-top: 10px solid rgb(107, 2, 39);
+    border-right: 10px solid rgb(103, 248, 0);
+    border-bottom: 10px solid rgb(0, 12, 141);
+    border-left: 10px solid rgb(125, 36, 4);
+    font-size: 28px;
+    font-weight: 600;
+
+  }
+
+
+
+/* CSS */
+.button-51 {
+    background-color: transparent;
+    border: 1px solid #266DB6;
+    box-sizing: border-box;
+    color: #00132C;
+    font-family: "Avenir Next LT W01 Bold",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-51:hover,
+  .button-51:active {
+    outline: 0;
+  }
+  
+  .button-51:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .button-51:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .button-51:hover:before {
+    background-color: #6DCFF6;
+  }
+  
+  @media (min-width: 768px) {
+    .button-51 {
+      padding: 16px 32px;
+    }
+  }
