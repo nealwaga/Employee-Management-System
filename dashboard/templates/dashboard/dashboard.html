@@ -28,16 +28,13 @@
         </div>
 
 
-
-
         <!-- DASHBOARD SECTION STARTS HERE -->
-
 
         <div class="  col-md-10 dash">
             <div class="container mt-5">
                 <nav class="navbar mb-5 navbar-expand-lg bg-none">
                     <div class="container-fluid">
-                      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-table-columns"></i> Cash Control Dashboard</a>
+                      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -47,7 +44,7 @@
                             <a class="nav-link active" aria-current="page" href="#"></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-clock"></i> 17th January 2022 </a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-clock"></i> {{today}} </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#"></a>
@@ -76,7 +73,7 @@
                               <a class="nav-link mt-2" href="#"><i class="fa-solid fa-download"></i> Export</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#"><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add Income</button></a>
+                              <a class="nav-link" href="#"><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus mr-2"></i> Add File(s)</button></a>
                             </li>
                           </ul>
                         <span class="nav-item">
@@ -88,88 +85,32 @@
                   </nav>
 
                   <div class="container">
-                    <div class="row row-cols-1 row-cols-md-4">
-                        <div class="col">
-                            <div class="card card2" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Total Expenses</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                  <p class="card-text"><div class="badge3 text-center m-5"><p class="text-center mt-md-3 tsmall">{{sumb}}</small></p></div></p>
-                                 </div>
-                              </div>
-                        </div>
-
-                        
-
-                        <div class="col">
-                            <div class=" card2 card" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">My Income</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                  <p class="card-text"><div class="badge text-center m-5"><p class="text-center mt-md-3 tsmall">{{current_user.profile.income}}</p></div></p>
-                                 </div>
-                              </div>
-                        </div>
-
-                        <div class="col">
-                            <div class=" card2 card" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Account Balance</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                  <p class="card-text text-center"><div class="badge2 text-center m-5"><p class="text-center mt-md-3 tsmall"> {{result}}</p></div></p>
-                                 </div>
-                              </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card card2" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Categories</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted"></h6>
-                                  <p class="card-text"> 
-                                    <ul>
-                                        <li class="mt-md-3"><i class="fa-solid fa-burger"></i> Food</li>
-                                        <li class="mt-md-3"><i class="fa-solid fa-car-side"></i>  Transport</li>
-                                        <li class="mt-md-3"><i class="fa-solid fa-mobile-screen"></i>  Data/Airtime</li>
-                                        <li class="mt-md-3"><i class="fa-solid fa-face-surprise"></i>  Impulse</li>
-                                    </ul>
-                                  </p>
-
-                                  
-                                </div>
-                              </div>
-                        </div>
-
-                    </div>
+                    
                     <div class="container card card3 mt-5">
-                        <h4 class="mt-4 mb-4"><i class="fa-solid fa-chart-line"></i>  Recent Expenses</h4>
+                        <h4 class="mt-4 mb-4"><i class="fa-solid fa-chart-line"></i>  Recent File Uploads</h4>
 
                         <div class="card card3">
                             <table class="table table-hover">
                                 <thead class="table-height">
                                   <tr>
-                                   
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Amount</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">PDF File</th>
                                     <th scope="col">Date</th>
                                   </tr>
                                 </thead>
                                 <tbody class="table-group-divider">
-                                  {% if expenses %}
-                                    {% for expense in expenses|slice:":3"  %}
-                                    <tr>
-                                    
-                                    
-                                    <td>{{expense.category}}</td>
-                                    <td>{{expense.description}}</td>
-                                    <td>{{expense.amount}}</td>
-                                    <td>{{expense.date}}</td>
-                                    
+                                  {% if pdfs %}
+                                    {% for pdf in pdfs %}
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td>{{pdf.subject}}</td>
+                                    <td>{{pdf.pdf_file}}</td>
+                                    <td>{{pdf.upload_date}}</td>
                                 </tr>
                                   {% endfor %}
                                     {% else %}
-                                    <td colspan="5" class="table-active">You have no expenses but no worries, just add one. <a href=""><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-plus"></i> Add Expense</button></a></td>
+                                    <td colspan="5" class="table-active">You have not uploaded any files but no worries, you can add one. <a href=""><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add File(s)</button></a></td>
                                     {% endif %}
                                 </tbody>
                               </table>
@@ -193,7 +134,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Income</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add File(s)</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -203,7 +144,7 @@
                     {{ form|crispy }}
                 
                 <div class="form-group text-center">
-                    <button class="btn button-18 mt-3" type="submit">Add Income</button>
+                    <button class="btn button-18 mt-3" type="submit">Add</button>
                 </div>
             </form>
         </div>
