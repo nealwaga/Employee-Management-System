@@ -19,9 +19,7 @@
                 <p class="fw-bold text-muted">{{current_user.email}}</p>
                 <p class="mt-5 text-start text-muted fw-bold"><small class="text-muted">Main Menu</small> </p>
                 <h6 class="mt-4 text-start m-3  menu"><i class="fa-solid fa-table-columns"></i> <a class="lnk" href="{% url 'dashboard' %}">Dashboard</a> </h6>
-                <h6 class="mt-4 text-start m-3 menu"><i class="fa-solid fa-chart-line"></i> <a class="lnk" href="">Expenses</a> </h6>
-                <h6 class="mt-4 text-start m-3 menu"><i class="fa-solid fa-gauge-high"></i> <a class="lnk" href="">Analytics</a> </h6>
-                <h6 class="mt-4 text-start m-3 menu"><i class="fa-solid fa-gear"></i> <a class="lnk" href="{% url 'profile' %}">Settings</a> </h6>
+                <h6 class="mt-4 text-start m-3 menu"><i class="fa-solid fa-gear"></i> <a class="lnk" href="{% url 'profile' %}">Profile</a> </h6>
                 <h6 class="mt-4 text-start m-3 menu"><i class="fa-solid fa-right-from-bracket"></i> <a class="lnk" href="{% url 'logout' %}">Logout</a> </h6>
 
             </div>
@@ -53,25 +51,22 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">
-                                <form class="input-group w-auto my-auto d-none d-sm-flex" role="search" action="">
-                 
+                            
                                     <input
                                       autocomplete="on"
                                       type="text"
                                       class="form-control rounded"
                                       placeholder="Search"
                                       name="exp"
-                                      
+                                      id="searchInput"
                                     />
+                                    
                                     <span class="input-group-text border-0 d-none d-lg-flex"
                                       ></i
                                     ></span>
-                                  </form>
                               </a>
                             </li>
-                            <li class="nav-item">
-                              <a class="nav-link mt-2" href="#"><i class="fa-solid fa-download"></i> Export</a>
-                            </li>
+                            
                             <li class="nav-item">
                               <a class="nav-link" href="#"><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus mr-2"></i> Add File(s)</button></a>
                             </li>
@@ -155,6 +150,18 @@
     </div>
   </div>
 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#searchInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("table tbody tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+  });
+</script>
 
 
 {% endblock %}
