@@ -3,7 +3,7 @@
 ## Built By [Neal Waga](https://github.com/nealwaga/)
 
 ## Description
-This is a web application that allows users to sign-up or log-in then update their own profile in order to upload whatever files they want to: images, pdf documents, you name it.
+This is a simple web application that allows users to sign-up or log-in then update their own profile in order to upload whatever files they want to: images, pdf documents, you name it.
 
 ***
 
