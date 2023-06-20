@@ -1,9 +1,9 @@
-# File-Upload-System
+# Employee-Management-System
 
 ## Built By [Neal Waga](https://github.com/nealwaga/)
 
 ## Description
-This is a simple web application that allows users to sign-up or log-in, update their own profile, create departments, register employees by assigning them to various departments and upload files related to a specific employee. Users can upload whatever files they want to: images, pdf documents, you name it.
+This is a simple web application that allows users to create an account, update their own profile, create departments, register employees by assigning them to various departments and upload files related to a specific employee. Users can upload whatever files they want to: images, pdf documents, you name it.
 
 ***
 
