@@ -3,7 +3,7 @@
 ## Built By [Neal Waga](https://github.com/nealwaga/)
 
 ## Description
-This is a simple web application that allows users to sign-up or log-in then update their own profile in order to upload whatever files they want to: images, pdf documents, you name it.
+This is a simple web application that allows users to sign-up or log-in, update their own profile, create departments, register employees by assigning them to various departments and upload files related to a specific employee. Users can upload whatever files they want to: images, pdf documents, you name it.
 
 ***
 
@@ -12,7 +12,9 @@ These are the behaviors/features that the application implements for use by a us
 Users would like to:
 * Sign in to the application to start using.
 * Update their profile.
-* Upload whatever files they want to with a subject description.
+* Create departments.
+* Register employees by assigning them to a specific department.
+* Upload whatever files they want for a specific employee with a subject description.
 * Search for a file upload if they are too many.
 ***
 
