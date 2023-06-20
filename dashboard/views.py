@@ -49,6 +49,7 @@ def employees(request):
         form = EmployeeForm(request.POST, request.FILES)
         if form.is_valid():
             employee = form.save(commit=False)
+            employee.user = current_user
             employee.save()
             return redirect('employees')
     else:
@@ -80,7 +81,9 @@ def department(request):
     if request.method == 'POST':
         form = DepartmentForm(request.POST)
         if form.is_valid():
-            form.save()
+            department = form.save()
+            department.user = current_user
+            department.save()
             return redirect('department')
     else:
         form = DepartmentForm()
