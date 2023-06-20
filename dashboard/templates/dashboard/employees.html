@@ -34,7 +34,7 @@
             <div class="container mt-5">
                 <nav class="navbar mb-5 navbar-expand-lg bg-none">
                     <div class="container-fluid">
-                      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+                      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-table-columns"></i> Employees</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -70,7 +70,7 @@
                             </li>
                             
                             <li class="nav-item">
-                              <a class="nav-link" href="#"><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus mr-2"></i> Add File(s)</button></a>
+                              <a class="nav-link" href="#"><button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus mr-2"></i> Register Employee</button></a>
                             </li>
                           </ul>
                         <span class="nav-item">
@@ -82,39 +82,41 @@
                   </nav>
 
                   <div class="container">
-                    
-                    <div class="container card card3 mt-5">
-                        <h4 class="mt-4 mb-4"><i class="fa-solid fa-chart-line"></i>  Recent File Uploads</h4>
 
+                    <div class="container card card3 mt-5">
+                        <h4 class="mt-4 mb-4"><i class="fa-solid fa-users"></i> Employees</h4>
+                    
                         <div class="card card3">
                             <table class="table table-hover">
                                 <thead class="table-height">
-                                  <tr>
+                                <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Employee</th>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">PDF File</th>
-                                    <th scope="col">Date</th>
-                                  </tr>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone No.</th>
+                                    <th scope="col">Job Title</th>
+                                    <th scope="col">Department</th>
+                                    <th scope="col">Date Joined</th>
+                                </tr>
                                 </thead>
                                 <tbody class="table-group-divider">
-                                  {% if pdfs %}
-                                    {% for pdf in pdfs %}
+                                {% if employees %}
+                                    {% for employee in employees %}
                                 <tr>
                                     <th scope="row">{{ forloop.counter }}</th>
-                                    <td>{{pdf.employee}}</td>
-                                    <td>{{pdf.subject}}</td>
-                                    <td>
-                                      <a href="{% url 'view_pdf' pdf.id %}" target="_blank">{{ pdf.pdf_file }}</a>
-                                    </td>
-                                    <td>{{pdf.upload_date}}</td>
+                                    <td>{{employee.full_name}}</td>
+                                    <td>{{employee.email}}</td>
+                                    <td>{{employee.phone_number}}</td>
+                                    <td>{{employee.job_title}}</td>
+                                    <td>{{employee.department}}</td>
+                                    <td>{{employee.date_joined}}</td>
                                 </tr>
-                                  {% endfor %}
+                                {% endfor %}
                                     {% else %}
-                                    <td colspan="5" class="table-active">You have not uploaded any files but no worries, you can add one. <button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add File(s)</button></td>
+                                    <td colspan="5" class="table-active">You have not registered any employees but no worries, you can add one. <button class="button-18" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Register Employee</button></td>
                                     {% endif %}
                                 </tbody>
-                              </table>
+                            </table>
                         </div>
                         
                     </div>
